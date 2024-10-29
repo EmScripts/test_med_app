@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./Sign_Up.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Google Font: Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    style="font-family: 'Montserrat', sans-serif; background-color: #efefef"
+  >
+    <div class="portfolio-container">
+      <nav class="d-flex justify-content-between align-items-center">
+        <div class="logo d-flex align-items-center">
+          <img src="../assets/images/caremate-logo.png" alt="CareMate Logo" />
+          <span class="ms-2">CareMate</span>
+          <ul class="nav-links d-flex ms-3" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Appointments</a></li>
+            <li><a href="#">Health Blog</a></li>
+            <li><a href="#">Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="auth-buttons">
+            <a class="login-button me-2 text-decoration-none" href="../Login/Login.html">Login</a>
+            <a class="register-button text-decoration-none" href="#">Register</a>
+          </div>
+      </nav>
+
+      <div class="form-container">
+        <form class="signup-form"  id="signupForm" novalidate>
+            <h2>Sign Up</h2>
+            <p>Already a member? <a href="#">Login</a>.</p>
+          
+            <div class="form-group">
+              <label for="role" class="input-label">Role</label>
+              <div class="input-container">
+                <i class="icon fa fa-user-tag"></i>
+                <select id="role" name="role" class="custom-input" required>
+                  <option value="">Select Role</option>
+                  <option value="patient">Patient</option>
+                  <option value="doctor">Doctor</option>
+                </select>
+              </div>
+                <span class="error-message" id="roleError"></span>
+            </div>
+            <div class="form-group">
+              <label for="name" class="input-label">Name</label>
+              <div class="input-container">
+                <i class="icon fa fa-user"></i>
+                <input type="text" id="name" name="name" class="custom-input" placeholder="Enter your name" required />
+              </div>
+                <span class="error-message" id="nameError"></span>
+            </div>
+          
+            <div class="form-group">
+              <label for="phone" class="input-label">Phone</label>
+              <div class="input-container">
+                <i class="icon fa fa-phone"></i>
+                <input type="tel" id="phone" name="phone" class="custom-input" placeholder="Enter your phone number" required />
+              </div>
+                <span class="error-message" id="phoneError"></span>
+            </div>
+          
+            <div class="form-group">
+              <label for="email" class="input-label">Email</label>
+              <div class="input-container">
+                <i class="icon fa fa-user"></i>
+                <input type="email" id="email" name="email" class="custom-input" placeholder="Enter your email address" required />
+              </div>
+                <span class="error-message" id="emailError"></span>
+            </div>
+          
+            <div class="form-group">
+              <label for="password" class="input-label">Password</label>
+              <div class="input-container">
+                <i class="icon fa fa-lock"></i>
+                <input type="password" id="password" name="password" class="custom-input" placeholder="Enter your password" required />
+              </div>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            <button type="button" class="btn btn-success w-100 mt-3" onclick="validateForm()">Submit</button>
+            <button type="reset" class="btn btn-secondary w-100 mt-2">Reset</button>
+        </form>
+          
+      </div>
+    </div>
+    <script src="../Navbar/Navbar.js"></script>
+    <script src="./formValidation.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
